@@ -1,0 +1,64 @@
+.defaultLayout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 100%;
+  position: relative;
+}
+
+.xImage {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  height: 100vh;
+  animation-name: bg-animation;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  overflow: hidden;
+}
+
+@keyframes bg-animation {
+  0% {
+    left: 53.6%;
+  }
+
+  100% {
+    left: 15%;
+  }
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio section {
+  text-align: center;
+}
+.logoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 4rem;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: var(--green-color);
+}
+
+.portfolio .strategic {
+  margin-top: 8rem;
+}
+
+@media (max-width: 600px) {
+  .logoGrid {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,99 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem;
+  z-index: 10000;
+}
+
+.navbar .navbarBrand {
+  max-height: 2rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.activeLink {
+  color: var(--active-link-color);
+  font-weight: 600;
+}
+
+.navbar .navbarMenu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  color: var(--gray-color);
+  font-weight: 600;
+}
+
+ .burgerIcon {
+  display: none;
+}
+
+.navbar a:hover {
+  color: var(--hover-color);
+}
+
+@media (max-width: 600px) {
+   .burgerIcon {
+    display: block;
+    z-index: 10;
+  }
+
+  .navbarMenu {
+    display: none !important;
+  }
+
+  .overlay {
+    display: block !important;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #221A33;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background-image: url('/mobile-x.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .overlayContent {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 64px;
+  }
+  
+  .overlay a {
+    padding: 3rem;
+    text-decoration: none;
+    font-size: 4rem;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+    font-weight: 600;
+  }
+  
+   .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    font-size: 60px;
+    color: #f1f1f1;
+  }
+}
+.overlay {
+  display: none;
+}
+.navbar .navbarMenu {
+  font-size: 1.6rem;
+}
+
+.navbar .navbarMenu > .navbarMenuItem:not(:last-child) {
+  margin-right: 4rem;
+}

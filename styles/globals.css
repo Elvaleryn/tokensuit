@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Rajdhani, sans-serif;
+  font-size: 10px;
+}
+:root {
+  --gray-color: #949199;
+  --dark-purple-color: #221A33;
+  --green-color: #7ACB88;
+  --hover-color: var(--green-color);
+  --active-link-color: var(--dark-purple-color);
+  --nav-link-color: var(--gray-color);
+}
+ul {
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

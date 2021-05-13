@@ -1,0 +1,76 @@
+.defaultLayout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 100%;
+  position: relative;
+}
+
+ .about {
+  max-width: 48rem;
+}
+
+.about .aboutContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.xImage {
+  position: absolute;
+  top: 50%;
+  left: 85%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  height: 100vh;
+  animation-name: bg-animation;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  overflow: hidden;
+}
+
+@keyframes bg-animation {
+  0% {
+    left: 53.6%;
+  }
+
+  100% {
+    left: 85%;
+  }
+}
+
+.primaryText {
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+ .textContent {
+  font-size: 2rem;
+  text-align: center;
+}
+.avatarContent {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.avatarContent .avatar {
+  width: 11.7rem;
+  height: 11.7rem;
+}
+.avatarContent .title {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.avatarContent .subtitle {
+  font-size: 2rem;
+}
+
+.avatarContent .textContent {
+  font-size: 1.8rem;
+}

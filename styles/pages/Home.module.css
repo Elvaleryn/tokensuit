@@ -1,0 +1,158 @@
+.defaultLayout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 100%;
+  position: relative;
+}
+
+.xImage {
+  z-index: 5;
+  opacity: 1;
+  left: 31%;
+  position: absolute;
+--x: calc(var(--px) - 0.5);
+--y: calc(var(--py) - 0.5);
+
+}
+.xImage:hover {
+  transform: perspective(1000px) rotateY(calc(var(--x) * 45deg))
+  rotateX(calc(var(--y) * -45deg));
+  transition: none;
+}
+
+.xImage image {
+  object-fit: cover;
+
+}
+
+.textContent {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  z-index: 6;
+  transform: translate(-50%, -50%);
+}
+
+.homeContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.homeContent .svgBox {
+  max-width: 450px;
+  min-width: 450px;
+  max-height: 50px;
+}
+
+.homeContent .textBox {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.homeContent .socialLinks {
+  display: flex;
+  align-items: center;
+}
+
+.homeContent .socialLinks > svg {
+  width: 2rem;
+  max-height: 2rem;
+}
+
+.homeContent .socialLinks > svg:not(:last-child) {
+  margin-right: 20px;
+}
+
+.homeContent .contactLink {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+
+.extraWatts {
+  width: 100%;
+}
+
+.extrawattsMobile {
+  display: none;
+}
+
+.mobileX { 
+  display: none;
+}
+
+.desktopX {
+  display: block;
+}
+
+.smallDesktopX {
+  display: none;
+}
+
+@media (min-width: 600px) and (max-width: 1441px) {
+  .desktopX {
+    display: none;
+  }
+  .mobileX {
+    display: none;
+  }
+  .smallDesktopX {
+    display: block;
+  }
+
+  .xImage {
+    left: 55%;
+  }
+}
+
+@media (max-width: 600px) {
+  .desktopX {
+    display: none;
+  }
+  .mobileX {
+    display: block;
+  }
+
+  .xImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+  }
+
+  .xImage img {
+    object-fit: cover;
+  }
+
+  .overlayBackground {
+    display: block;
+  }
+
+  .homeContent .textBox {
+    font-size: 1.8rem;
+    margin-top: unset;
+  }
+
+  .extrawattsMobile {
+    display: block;
+  }
+
+  .extraWatts {
+    display: none;
+  }
+}

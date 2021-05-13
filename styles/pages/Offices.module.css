@@ -1,0 +1,69 @@
+.defaultLayout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 100%;
+  position: relative;
+  background-image: url('/globe.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain ;
+  
+}
+
+.officeLocations {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.locationBox {
+  font-size: 1.8rem;
+}
+
+.textSpan {
+  margin-left: 16px;
+}
+
+.locationTitle {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.officeLocation .location {
+  display: flex;
+  flex-direction: column;
+}
+
+.location:not(:last-child) {
+  margin-right: 6rem;
+}
+
+@media (max-width: 600px) {
+  .officeLocations {
+    position:relative;
+    transform: unset;
+    left: unset;
+    top: unset;
+    margin-top: 3rem;
+  }
+
+  .location {
+    margin-right: 0 !important;
+    margin-bottom:2.4rem;
+  }
+
+  .offices {
+    background-image: url('/globe-mobile.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover  ;
+  }
+}

@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: auto;
+}
+.svgGroup > svg {
+  margin-right: 24px;
+}
+
+.footer .svgGroup {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+  }
+}
